@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background-color: green;
+            color: white;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        <!--2 Reais ou CLIQUE para ganhar um presente misterioso?-->
+        Coloque o mouse aqui!
+    </div>
+    
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Aêee! Ganhou a benga do KID BENGALA! 🍆🍆'   
+        }
+        function entrar() {
+            a.innerText = 'Vc sentou no KID BENGALA!'
+            a.style.background = 'red'
+        }
+        function sair() {
+            a.innerText = 'Agora vc levantou!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
